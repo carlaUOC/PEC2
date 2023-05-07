@@ -1,57 +1,367 @@
-* {
+html {
   box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  font-family: $body-font;
+  color: $text;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+h1 {
+  font-family: $body-font;
+  color: rgb(255, 255, 255);
+  font-size: 2.5em;
+  padding: 20px;
 }
 
-.uoc-logo {
+h2 {
+  text-transform: uppercase;
+  font-size: calc(1em + 0.5vw);
+  color: $text;
+  margin-bottom: 1em;
+}
+
+h3 {
+  padding: 0.2em;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: $text;
+  margin-bottom: 0;
+}
+
+hr {
+  opacity: 0;
+}
+
+a {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+/* HEADER.HTML; FOOTER.HTML */
+header,
+footer,
+*.navbar {
+  background-color: rgb(92,6,140) !important;
+  font-family: "ArgentumSans", sans-serif;  
+  width: 100%;
+}
+
+header .navbar-brand {  
+  margin: 20px 20px 10px 50px;
+  color: rgb(255, 255, 255);
+}
+
+*.nav-link  {  
+  color: rgb(255, 255, 255) !important;
+  font-size: 25px;
+  font-weight: 400;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+/* INDEX.HTML */
+.main {
+  &--title {
+    background-color: rgb(145,101,168);
+    margin: auto;
+    padding: 20px; 
+  }
+
+  &--events {
+    padding: 20px;
+  }
+
+  &__txt_location {
+    margin-bottom: initial;
+    text-align: center;
+  }
+
+  &__mt {
+    margin-top: 10px;
+  }
+
+  &__size__mauto {
+    width: 80%;
+    margin: 0 auto; 
+  }
+
+  &__w100 {
+    width: 100%;
+  }
+
+  &--event_title {
+    background-color: rgb(163 120 171);       
+  }
+
+  &--event_date {
+    background-color: rgb(217, 206, 219);
+  }
+
+  &--description {
+    font-family: $body-font;
+    color:$text;
+    text-align: center;
+    padding-top: 30px;  
+    @media only screen and (max-width: 1400px) {
+      padding: 30px 15px 15px 15px;
+    }
+  }  
+  
+  &--img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+    border: 10px solid rgb(128, 38, 139);
+    @media only screen and (max-width: 1400px) {
+      margin-top: 15px;
+    }  
+  }
+
+  &--inscription {
+    text-transform: uppercase;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    @media only screen and (max-width: 1400px) {
+      text-align: center;
+      padding: 35px;
+    }
+  }
+  
+  &--warning {
+    background-color: rgb(128, 38, 139);
+    height: 50px;
+    text-align: center;
+    margin: 100px auto;
+  }
+  
+  &--warning h2 {
+    padding-top: 10px;
+    color:rgb(217, 206, 219);
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+/* MEMBERS.HTML */
+.members {
+  width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: row wrap;
+  	flex-flow: row wrap;
+
+  padding-left: 0 !important;
+
+  li {
+    position: relative;
+    width: 33.333%;
+    float: left;
+    padding: 0.625rem;
+  
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  
+    -webkit-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
+
+  }
+  
+  li .box {
+    position:relative;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  li figure {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  
+  li img{
+    width: 100%;
+    margin: 10px;
+    height: auto;
+  }
+  
+  li h3{
+    margin-bottom: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: rgb(0,0,0);
+  }
+  
+  li time {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding: 6px;
+    font-weight: 400;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  li:nth-child(even) .box {
+    background: rgb(255, 255, 255);
+  }
+  
+  @media screen and (max-width:992px) {  
+    .members {
+      width: auto;
+    }  
+  }
+  
+  @media screen and (max-width:768px) {  
+    .members li {
+      width: 50%;
+    }  
+  }
+  
+  @media screen and (max-width:468px) {  
+    .members li {
+      width: 100%;
+    }
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+/* INFO.HTML*/
+.club {
+	margin: 30px auto;
+  width: 80%;
+	overflow: hidden;
+
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-direction: column;
+  	flex-direction: column;
+
+
+  .club-img {
+    text-align: center;
+  }
+    
+  .club-img img {
+    margin: 0 auto;
+    width: 30%;
+    height: auto;
+  }
+    
+  p {
+    text-align: justify;
+  }
+    
+  hr {
+    opacity: 0.5;
+    border-color: rgb(128, 38, 139);
+    margin:30px 0;
+  }
+    
+  blockquote {
+    margin: 20px;
+  }
+    
+  li {
+    list-style: none;
+  }
+}
+
+
+/* ABOUT.HTML */
+.about {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.3;
+  margin-bottom: 1em;
+  
+  .btn {
+    margin-top: 30px;
+  }
+}
+
+// Grid layout for wide display
+@supports (display:grid) {
+  @media (min-width: 42em) and (min-height: 27em) {
+    main {
+      max-width: 800px;
+      padding: 1rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px 200px 200px 200px;
+      grid-template-rows: 200px 200px 200px 250px 200px;
+      grid-gap: 1rem;
+    }
+    .main {
+      &--img {
+        grid-column: 1 / 5;
+        grid-row: 1 / 3;
+      }
+
+      &--title {
+        grid-column: 1 / 3;
+        grid-row: 2 /4;
+        z-index: 1;
+      }
+
+      &--events {
+        grid-column: 3 / 5;
+        grid-row: 3 / 5;
+      }
+  
+      &--about {
+        grid-column: 1 / 3;
+        grid-row: 2 / 2;
+        align-self: end;
+        padding-bottom: 4vh;
+        margin-bottom: initial;
+      }
+  
+      &--inscription {
+        grid-column: 1 / 5;
+        grid-row: 5 / 6;
+      }
+  
+      &--description {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+      }
+  
+      &--warning {
+        grid-column: 1 / 5;
+        grid-row: 5 / 6;
+      }
+    }
+  }
+
+  @media (min-width: 48em) and (min-height: 27em) {
+    hr {
+      opacity: 1;
+    }
+  }
 }

@@ -13,7 +13,6 @@
     "color-no-invalid-hex": true,
     "string-no-newline": true,    
     "color-hex-alpha": "always",
-    "declaration-no-important": true,
     "block-no-empty": true,
     "comment-no-empty": true
   }

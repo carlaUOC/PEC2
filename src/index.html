@@ -1,27 +1,54 @@
-<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <title>PEC 2 - Herramientas HTML y CSS II</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <include src="./views/header.html"></include>
+    <main>
+      <div class="main--title main__txt_location">
+        <h1>V Torneo Ajedrez Adeje</h1>
+        <h2>Islas Canarias 2023</h2>
+      </div>
+      <img class="main--img main__w100" src="./assets/images/como-ganar-una-partida-de-ajedrez-en-solo-dos-jugadas.jpg">
+      <div class="main--events main__txt_location">
+        <h2>Del 10 al 15 de mayo</h2>
+        <div class="main--event main__mt">
+          <div class="main--event_title main__mt main__size__mauto"><h3>Fase 1</h3></div>
+          <div class="main--event_date main__mt main__size__mauto">Miércoles 10 - 10:30h</div>
+        </div>
+        <div class="main--event main__mt">
+          <div class="main--event_title main__mt main__size__mauto"><h3>Fase 2</h3></div>
+          <div class="main--event_date main__mt main__size__mauto">Jueves 11 - 10:30h</div>
+        </div>
+        <div class="main--event main__mt">
+          <div class="main--event_title main__mt main__size__mauto"><h3>Fase 3</h3></div>
+          <div class="main--event_date main__mt main__size__mauto">Viernes 12 - 10:30h</div>
+        </div>   
+        <div class="main--event main__mt">
+          <div class="main--event_title main__mt main__size__mauto"><h3>Fase 4</h3></div>
+          <div class="main--event_date main__mt main__size__mauto">Sábado 13 - 10:30h</div>
+        </div> 
+        <div class="main--event main__mt">
+          <div class="main--event_title main__mt main__size__mauto"><h3>Fase 5</h3></div>
+          <div class="main--event_date main__mt main__size__mauto">Domingo 14 - 10:30h</div>
+        </div>      
+      </div>
+      <div class="main--description main__mt">
+        <p>De los torneos de ajedrez individuales, el V Torneo de Ajedrez, en Tenerife está entre los más reconocidos de España. De los torneos por equipos las Olimpiadas de ajedrez son el torneo que cuenta con más jugadores, los cuales compiten por su país de la misma manera que en los Juegos Olímpicos.</p>
+      </div>
+      <div class="main--inscription">
+        <h3>Lugar: C/Padua, Adeje, 38670, Tenerife, Islas Canarias</h3>
+        <h3>Inscripciones: +34 612 235 456, chernandezd@uoc.edu.es</h3>
+      </div>
+      <div class="main--warning main__w100">
+        <h2>¡APÚNTATE YA! PLAZAS LIMITADAS</h2>
+      </div>
+    </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+</body>
 </html>

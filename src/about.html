@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <title>PEC 2 - Herramientas HTML y CSS II</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <div class="about container-fluid">
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" src="./assets/images/ajedrez.png" alt="" width="72" height="72">
+          <h2>Formulario de contacto</h2>
+          <p class="lead">Complete el siguiente formulario y un miembro de nuestra equipo se pondrá en contacto contigo para darte toda la información que necesites sobre nuestro club de ajedrez.</p>
+        </div>
+        <div class="col-md-12 order-md-1">
+            <form class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName">Nombre</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Nombre obligatorio.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Apellidos</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Apellidos obligatorios.
+                  </div>
+                </div>
+              </div>  
+              <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                    Por favor, introduzca su email para recibir información sobre nosotros.
+                </div>
+                </div>  
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <label for="address">Dirección</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    </div>                
+                    <div class="col-md-4 mb-3">
+                        <label for="zip">Código Postal</label>
+                        <input type="text" class="form-control" id="zip" placeholder="" required>
+                        <div class="invalid-feedback">
+                        Código postal requerido.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="country">País</label>
+                        <select class="custom-select d-block w-100" id="pais" required>
+                            <option value="">Elige...</option>
+                            <option>España</option>
+                            <option>Portugal</option>
+                            <option>Francia</option>
+                            <option>Italia</option>
+                        </select>
+                    <div class="invalid-feedback">
+                    Por favor, selecciona un país valido.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="state">Comunidad Autonóma</label>
+                  <select class="custom-select d-block w-100" id="ccaa" required>
+                    <option value="">Elige...</option>
+                    <option>Canarias</option>
+                    <option>Galicia</option>
+                    <option>Madrid</option>
+                    <option>Cataluña</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor, selecciona una CCAA valida.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="state">Provincia</label>
+                    <select class="custom-select d-block w-100" id="provincia" required>
+                      <option value="">Elige...</option>
+                      <option>Santa Cruz de Tenerife</option>
+                      <option>Las Palmas de Gran Canaria</option>
+                      <option>Madrid</option>
+                      <option>Barcelona</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecciona una provincia valida.
+                    </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+</html>
